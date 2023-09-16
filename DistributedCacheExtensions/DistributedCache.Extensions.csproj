@@ -1,9 +1,17 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFramework>net7.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
+
+	<Authors>Yuri Withowsky</Authors>
+	<Description>Extensions to the distributed cache</Description>
+	  
+	<PackageId>DistributedCache.Extensions</PackageId>
+	<PackageLicenseExpression>MIT</PackageLicenseExpression>
+	<PackageReadmeFile>README.md</PackageReadmeFile>
+	<PackageTags>cache, caching, distributed, library</PackageTags>
   </PropertyGroup>
 
   <ItemGroup>
