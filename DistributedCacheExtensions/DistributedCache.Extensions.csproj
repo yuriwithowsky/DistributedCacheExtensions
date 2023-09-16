@@ -10,7 +10,6 @@
 	  
 	<PackageId>DistributedCache.Extensions</PackageId>
 	<PackageLicenseExpression>MIT</PackageLicenseExpression>
-	<PackageReadmeFile>README.md</PackageReadmeFile>
 	<PackageTags>cache, caching, distributed, library</PackageTags>
   </PropertyGroup>
 
