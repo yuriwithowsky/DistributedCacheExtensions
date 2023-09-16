@@ -15,7 +15,7 @@ jobs:
     - name: Setup .NET
       uses: actions/setup-dotnet@v3
     - name: Pack
-      run: dotnet pack -c Release -output nuget/
+      run: dotnet pack -c Release --output nuget/
     - uses: actions/upload-artifact@v3
       with:
         name: nuget
