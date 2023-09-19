@@ -5,14 +5,17 @@ VisualStudioVersion = 17.8.34004.107
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DistributedCache.Extensions", "DistributedCacheExtensions\DistributedCache.Extensions.csproj", "{05FCD66E-E34C-40E6-93E6-D88DF4C3A469}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{ABC85687-C210-4935-B369-BEF0F9B03A33}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{ABC85687-C210-4935-B369-BEF0F9B03A33}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DistributedCache.Extensions.Tests", "DistributedCacheExtensionsTests\DistributedCache.Extensions.Tests.csproj", "{1B4FDFD8-4DDA-4B16-8175-755D3C62DDC4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DistributedCache.Extensions.Tests", "DistributedCacheExtensionsTests\DistributedCache.Extensions.Tests.csproj", "{1B4FDFD8-4DDA-4B16-8175-755D3C62DDC4}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{7AAB4369-D544-48A0-A634-9A0385AA849E}"
 	ProjectSection(SolutionItems) = preProject
 		.github\workflows\dotnet.yml = .github\workflows\dotnet.yml
+		README.md = README.md
 	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{82533727-000E-4CF5-9A91-5F0D8E42DDD7}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +36,7 @@ Global
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
+		{05FCD66E-E34C-40E6-93E6-D88DF4C3A469} = {82533727-000E-4CF5-9A91-5F0D8E42DDD7}
 		{1B4FDFD8-4DDA-4B16-8175-755D3C62DDC4} = {ABC85687-C210-4935-B369-BEF0F9B03A33}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
