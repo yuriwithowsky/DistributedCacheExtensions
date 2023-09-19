@@ -5,6 +5,8 @@
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
 
+	<VersionPrefix>1.0.1</VersionPrefix>
+	
 	<Authors>Yuri Withowsky</Authors>
 	<Description>Extensions to the distributed cache</Description>
 	  
