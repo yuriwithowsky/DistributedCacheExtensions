@@ -5,11 +5,13 @@
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
 
-	<VersionPrefix>1.0.2</VersionPrefix>
+	<VersionPrefix>1.0.3</VersionPrefix>
 	
 	<Authors>Yuri Withowsky</Authors>
 	<Description>Extensions to the distributed cache</Description>
-
+	<RepositoryUrl>https://github.com/yuriwithowsky/DistributedCacheExtensions</RepositoryUrl>
+	  
+	<PackageProjectUrl>https://github.com/yuriwithowsky/DistributedCacheExtensions</PackageProjectUrl>
 	<PackageReadmeFile>README.md</PackageReadmeFile>
 	<PackageId>DistributedCache.Extensions</PackageId>
 	<PackageLicenseExpression>MIT</PackageLicenseExpression>

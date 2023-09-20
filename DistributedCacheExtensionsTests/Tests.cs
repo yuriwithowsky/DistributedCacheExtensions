@@ -23,6 +23,16 @@ public class Tests
     }
 
     [Fact]
+    public async Task GetAsync_WhenCacheNotExist_ReturnsNull()
+    {
+        var user = new User("John", "Snow");
+
+        var cache = await _distributedCache.GetAsync<User>(nameof(GetAsync_WhenCacheNotExist_ReturnsNull));
+
+        Assert.Null(cache);
+    }
+
+    [Fact]
     public void Get_WhenCacheExist_ReturnsSerializedObject()
     {
         var user = new User("John", "Snow");
@@ -30,6 +40,18 @@ public class Tests
         _distributedCache.Set(nameof(Get_WhenCacheExist_ReturnsSerializedObject), user);
 
         var cache = _distributedCache.Get<User>(nameof(Get_WhenCacheExist_ReturnsSerializedObject));
+
+        Assert.NotNull(cache);
+    }
+
+    [Fact]
+    public async Task GetAsync_WhenCacheExist_ReturnsSerializedObject()
+    {
+        var user = new User("John", "Snow");
+
+        await _distributedCache.SetAsync(nameof(GetAsync_WhenCacheExist_ReturnsSerializedObject), user);
+
+        var cache = await _distributedCache.GetAsync<User>(nameof(GetAsync_WhenCacheExist_ReturnsSerializedObject));
 
         Assert.NotNull(cache);
     }
