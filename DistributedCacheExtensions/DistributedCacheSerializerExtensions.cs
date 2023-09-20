@@ -208,7 +208,7 @@ public static class DistributedCacheSerializerExtensions
 
             if (value is not null)
             {
-                await cache.SetAsync(key, value, cancellationToken).ConfigureAwait(false);
+                await cache.SetAsync(key, value, options, cancellationToken).ConfigureAwait(false);
             }
         }
         return value;

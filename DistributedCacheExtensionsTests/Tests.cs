@@ -1,3 +1,4 @@
+using FakeItEasy;
 using Microsoft.Extensions.Caching.Distributed;
 
 namespace DistributedCache.Extensions.Tests;
@@ -36,15 +37,24 @@ public class Tests
     [Fact]
     public void Get_WhenCacheNotExist_ReturnsSerializedObject()
     {
-        User getUser ()
-        {
-            return new User("John", "Snow");
-        };
+        var service = A.Fake<IFakeService>();
 
-        var cache = _distributedCache.Get<User>(nameof(Get_WhenCacheExist_ReturnsSerializedObject), getUser);
+        var cache = _distributedCache.Get<User>(nameof(Get_WhenCacheExist_ReturnsSerializedObject), service.GetOneUser);
 
         Assert.NotNull(cache);
+        A.CallTo(() => service.GetOneUser()).MustHaveHappened();
+    }
+
+    [Fact]
+    public void Get_WhenCacheAlreadyExist_CallDelegateMethodOnce()
+    {
+        var service = A.Fake<IFakeService>();
+
+        var cache = _distributedCache.Get<User>(nameof(Get_WhenCacheExist_ReturnsSerializedObject), service.GetOneUser);
+        var cache2 = _distributedCache.Get<User>(nameof(Get_WhenCacheExist_ReturnsSerializedObject), service.GetOneUser);
+
+        Assert.NotNull(cache);
+        Assert.NotNull(cache2);
+        A.CallTo(() => service.GetOneUser()).MustHaveHappenedOnceExactly();
     }
 }
-
-public record User(string FirstName, string LastName);

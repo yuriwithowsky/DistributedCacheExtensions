@@ -5,11 +5,12 @@
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
 
-	<VersionPrefix>1.0.1</VersionPrefix>
+	<VersionPrefix>1.0.2</VersionPrefix>
 	
 	<Authors>Yuri Withowsky</Authors>
 	<Description>Extensions to the distributed cache</Description>
-	  
+
+	<PackageReadmeFile>README.md</PackageReadmeFile>
 	<PackageId>DistributedCache.Extensions</PackageId>
 	<PackageLicenseExpression>MIT</PackageLicenseExpression>
 	<PackageTags>cache, caching, distributed, library</PackageTags>
@@ -17,6 +18,10 @@
 
   <ItemGroup>
     <PackageReference Include="Microsoft.Extensions.Caching.Abstractions" Version="7.0.0" />
+  </ItemGroup>
+	
+  <ItemGroup>
+    <None Include="..\README.md" Pack="true" PackagePath="\" />
   </ItemGroup>
 
 </Project>
